@@ -1,2 +1,19 @@
-# Add .vscode to the ignore list
-.vscode/
+```diff
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +2 @@
+ .vscode
++node_modules
+
+```
+
+This diff adds `node_modules` to the `.gitignore` file.  The `+` sign indicates a new line that's been added.   
+
+To apply this change:
+
+1. **If you haven't already**, create a `.gitignore` file in the root directory of your project.
+2. **Open the `.gitignore` file in a text editor.**
+3. **Add the line** `node_modules` (if it's not already there).
+4. **Save the file.**
+
+Now, the `node_modules` directory will be ignored by Git.
