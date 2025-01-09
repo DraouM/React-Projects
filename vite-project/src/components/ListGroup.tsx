@@ -1,13 +1,18 @@
 import { useState } from "preact/hooks";
 
-function ListGroup() {
-  let items = ["Mascra", "Oran", "SBA", "Algier", "Saida", "Stif"];
+interface Props{
+  items: string[];
+  heading : string;
+  onSelecteItem : (item:string) => void;
+}
+
+function ListGroup({items, heading, onSelecteItem}: Props) {
 
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
-      <h1>List</h1>
+      <h1>List of {heading}</h1>
       {items.length === 0 && <p>No Item is found!!</p>}
       <ul className="list-group">
         {items.map((item, index) => (
@@ -20,6 +25,7 @@ function ListGroup() {
             key={item}
             onClick={() => {
               setSelectedIndex(index);
+              onSelecteItem(item)
             }}
           >
             {item}
