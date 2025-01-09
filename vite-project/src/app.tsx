@@ -1,7 +1,16 @@
-import ListGroup from "./components/ListGroup";
-
-function App(){
-  return <div><ListGroup /></div>
-} 
+import Button from "./components/Button";
+function App() {
+  return (
+    <div>
+      <Button
+        onClick={() => {
+          console.log("hello Mohamed");
+        }}
+      >
+        Click Me
+      </Button>
+    </div>
+  );
+}
 
 export default App;
