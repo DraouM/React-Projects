@@ -30,13 +30,15 @@ body {
   min-height: 100vh;
 }
 
-.card{
+.card {
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem ;
+  padding: 2rem;
   margin: 0 auto;
   border: 1px solid white;
   border-radius: 10px;
+  position: relative;
+  padding-bottom: 3rem;
 }
 
 .header {
@@ -45,14 +47,28 @@ body {
   justify-content: space-between;
 }
 
-.nav-list{
+.nav-list {
   list-style: none;
-  display:flex;
+  display: flex;
   gap: 1rem;
 }
+.facts-list li {
+  margin: 0 1rem; /* existing margin */
+  margin-bottom: 0.5rem; /* add bottom margin */
+}
 
-.nav-item:hover{
-  color: rgba(10, 240, 240, 0.753)
+.nav-item:hover {
+  color: rgba(10, 240, 240, 0.897);
+}
+
+.footer {
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  width: calc(100% - 2rem - 2px);
+  background-color: #080808;
+  padding: .5rem 1rem;
+  border-radius: 0 0 10px 10px;
 }
 h1 {
   font-size: 3.2em;

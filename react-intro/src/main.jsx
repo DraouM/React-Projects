@@ -22,7 +22,7 @@ function MainContent() {
   return (
     <main>
       <h1>Fun facts about React</h1>
-      <ol>
+      <ol className="facts-list">
         <li>Was first released in 2013</li>
         <li>Was originally created by Jordan Walke</li>
         <li>
@@ -41,7 +41,7 @@ function MainContent() {
 }
 
 function Footer() {
-  return <footer>Copyright 2024, React Facts</footer>;
+  return <footer className="footer">Copyright 2024, React Facts</footer>;
 }
 
 function ReactFacts() {
