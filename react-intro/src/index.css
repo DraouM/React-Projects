@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Poppins",  Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -23,17 +23,11 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: 0; /* Reset default margins */
+  overflow: hidden; /* Prevent scrollbars when container takes full viewport */
 }
-
 .card {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: calc(100% - 8rem);
   margin: 0 auto;
   border: 1px solid white;
   border-radius: 10px;
@@ -41,10 +35,26 @@ body {
   padding-bottom: 3rem;
 }
 
+
 .header {
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  padding: 1.5rem;
+  background-color: #1a1a1a;
+  border-radius: 10px 10px 0 0 ;
+}
+
+.main {
+  padding: 1.5rem 2.5rem;
+
+  background-image: url(./assets/react-grey.svg);
+  background-repeat: no-repeat;
+  background-size: 16rem;
+  background-position-x: 120%;
+  background-position-y: 20%;
 }
 
 .nav-list {
@@ -52,9 +62,18 @@ body {
   display: flex;
   gap: 1rem;
 }
+
 .facts-list li {
+  list-style-type: disc;
+  line-height: 20px;
   margin: 0 1rem; /* existing margin */
   margin-bottom: 0.5rem; /* add bottom margin */
+}
+
+.facts-list li::marker {
+  color: rgba(10, 240, 240, 0.897);
+  font-size: 1.6em; /* Adjust size as needed */
+  vertical-align: bottom; /* Align bullet with text baseline */
 }
 
 .nav-item:hover {
@@ -67,9 +86,20 @@ body {
   left: 1px;
   width: calc(100% - 2rem - 2px);
   background-color: #080808;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0 0 10px 10px;
 }
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo-text {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: rgba(10, 240, 240, 0.897);
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
