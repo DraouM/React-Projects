@@ -1,3 +1,12 @@
 export default function Header() {
-  return <h3>This is a Header</h3>;
+  return (
+    <div className="header">
+      <div className="logo">
+        <span>
+          <img src="../src/assets/earth.png" alt="react logo" />
+        </span>
+        <span>My Travel Journal</span>
+      </div>
+    </div>
+  );
 }
