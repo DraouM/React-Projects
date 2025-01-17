@@ -1,3 +1,17 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* Suggested code may be subject to a license. Learn more: ~LicenseLog:1135135106. */
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -23,30 +37,32 @@
 .card {
   border: 2px solid white;
   border-radius: 4px;
+  max-width: 600px;
+  text-align: left;
 }
 
 .read-the-docs {
   color: #888;
 }
 
-.header .logo{
+.header .logo {
   background-color: #646cffaa;
   height: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .25rem;
+  gap: 0.25rem;
   padding: 1rem;
 }
 
 .header span {
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: 500;
 }
 .header span img {
   display: block;
   width: 30px;
-  margin-right: .25rem;
+  margin-right: 0.25rem;
 }
 
 .logo {
@@ -58,4 +74,36 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/*  */
+.img-place {
+  width: 100px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.item-container {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.item-header .icon {
+  width: 16px;
+}
+.item-details .title {
+  margin-bottom: 1rem;
+}
+.item-details .date {
+  margin-bottom: 0.5rem;
+}
+.item-details .description {
+  font-size: 0.9em;
+  font-weight: 200;
+  color: #fff9;
 }
