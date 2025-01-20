@@ -1,10 +1,11 @@
-export default function Item() {
+export default function Item(props) {
+  console.log(props.image);
   return (
     <article className="item-container">
       <div className="img-place">
         <img
-          src="../src/assets/jessica-irani.jpg"
-          alt="beautiful place"
+          src= {props.image.src}
+          alt={props.image.alt}
         />
       </div>
      
@@ -15,16 +16,13 @@ export default function Item() {
             src="../src/assets/earth.png"
             alt="react logo"
           />
-          <span>United States</span>
-          <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Check this link</a>
+          <span>{props.country}</span>
+          <a href={props.link} target="_blank" rel="noopener noreferrer">Check this link</a>
         </div>
-        <h2 className="title">Seattle, Seattle</h2>
-        <p className="date">February 22, 2022, Mars 26, 2022</p>
+        <h2 className="title">{props.location}</h2>
+        <p className="date">{props.date}</p>
         <p className="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          obcaecati minus facere expedita hic. Vero voluptatem voluptate quaerat
-          quasi, odio perferendis alias similique, corrupti ullam explicabo
-          doloribus! Ut, sed odit.
+          {props.description}
         </p>
       </div>
     </article>
