@@ -31,11 +31,27 @@ function App() {
       </div>
 
       <div className="jokes">
-        <Joke />
-        <Joke />
-        <Joke />
-        <Joke />
-        <Joke />
+        <Joke
+          title="1. Tech Support"
+          setup="Why did the computer go to the doctor?"
+        />
+
+        <Joke
+          title="2. Coffee Lover"
+          setup="Why did the coffee file a police report?"
+          punchline="It got mugged!"
+        />
+
+        <Joke
+          title="3. Math Class"
+          setup="Why was the equal sign so humble?"
+          punchline="Because it knew it wasn’t less than or greater than anyone else"
+        />
+        <Joke
+          title="4. Gardening"
+          setup="Why don’t skeletons fight each other?"
+          punchline="They don’t have the guts!"
+        />
       </div>
     </div>
   );
