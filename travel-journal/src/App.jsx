@@ -17,6 +17,10 @@ import jokesData from "../src/jokesData";
 import placesData from "./placesData";
 
 function App() {
+  // const jokesElem = jokesData.map((joke) => {
+  //   return <Joke {...joke} />;
+  // });
+  
   const placesElem = placesData.map((place) => {
     return (
       <Item
