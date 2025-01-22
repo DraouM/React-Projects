@@ -11,12 +11,38 @@ import Joke from "./components/Joke";
 import person from "./assets/person.png";
 import face_ai from "./assets/face_ai.jpg";
 import kid from "./assets/kid.png";
-import marker from "./assets/marker.png"
+import marker from "./assets/marker.png";
 
+import jokesData from "../src/jokesData";
+import placesData from "./placesData";
 
 function App() {
+  const placesElem = placesData.map((place) => {
+    return (
+      <Item
+        title={place.title}
+        location={place.location}
+        date={place.startDate + " - " + place.endDate}
+        description={place.description}
+        image={place.image}
+        link={place.link}
+      />
+    );
+  });
+
+  console.log(placesData);
   return (
-    <div className="card">
+    <main className="card">
+      <Header />
+      {placesElem}
+    </main>
+  );
+}
+
+export default App;
+
+{
+  /* <div className="card">
       <Header />
       <Item 
         image = {{
@@ -51,9 +77,11 @@ function App() {
           name="Little Mickle"
           phone="9898653254"
         />
-      </div> */}
+      </div> */
+}
 
-      {/* <div className="jokes">
+{
+  /* <div className="jokes">
         <Joke
         num={1} 
           title="1. Tech Support"
@@ -79,9 +107,6 @@ function App() {
           setup="Why don’t skeletons fight each other?"
           punchline="They don’t have the guts!"
         />
-      </div> */}
-    </div>
-  );
+      </div> 
+    </div> */
 }
-
-export default App;
