@@ -66,16 +66,12 @@ main {
     padding: 1rem;
 }
 
-.input-div {
+.ingredient-form {
     display: flex;
     align-items: center;
 }
 
-.input-div label {
-    margin-right: 10px;
-}
-
-.input-div input {
+.ingredient-form input {
     width: 100%;
     padding: 10px;
     margin: 10px 10px 10px 0;
@@ -85,6 +81,11 @@ main {
     font-size: 1.1em;
     background-color: #ddd;
     color: #333;
+}
+
+.ingredient-form button::before {
+    content: "+";
+    margin-right: 6px;
 }
 
 li::before {
