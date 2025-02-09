@@ -9,16 +9,36 @@
 body {
     font-family: Helvetica, sans-serif;
     line-height: 1.6;
+    color: #333;
 }
 
+#root {
+    width: 100%;
+}
+
+.card {
+    width: 600px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0 0.1);
+    margin: auto;
+}
+
+/* Header Style */
 header {
+    border-radius: 20px;
     background-color: #333;
     color: #fff;
-    padding: 1em;
+    padding: 1rem;
     text-align: center;
+
+    margin-bottom: 1rem;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 header .logo-img {
@@ -38,4 +58,52 @@ header .logo-text {
     font-size: 1.5em;
     font-weight: bold;
 
+}
+
+/* Main Style */
+main {
+    width: 100%;
+    padding: 1rem;
+}
+
+.input-div {
+    display: flex;
+    align-items: center;
+}
+
+.input-div label {
+    margin-right: 10px;
+}
+
+.input-div input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    background-color: #ddd;
+    color: #333;
+}
+
+li::before {
+    width: 8px;
+    height: 8px;
+    content: "";
+    display: inline-block;
+    background-color: #333;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
 }
