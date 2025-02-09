@@ -1,21 +1,28 @@
 export default function Main(){
+    const ingredients = ["Chicken", "Oregano", "Tomatoes"]
+
+    function submitForm(event) {
+        event.preventDefault();
+        console.log("Form submited");
+        
+    }
+
+    let ingredientListItems = ingredients.map((item, index)=>{
+        return <li key={index}>{item}</li>
+    })
+    
+
     return (
         <main>
-            <form action="" method="post">
-             <div className="input-div">
-                <input type="text" id="search" className="search" placeholder="Search for recepie ..." />
-                <button type="submit">Search</button>
-             </div>
+            <form action="" method="post" className="ingredient-form" onSubmit={submitForm}>
+                <input type="text" id="add-ingredient" className="add-ingredien" placeholder="e.g. Sucre" />
+                <button >Add </button>
             </form>
 
             <h2>Ingredients on hand</h2>
 
             <ul>
-                <li>Ingrediant one </li>
-                <li>lorem lipsum lorem </li>
-                <li>some other ingrediants</li>
-                <li>lorem lipsum lorem </li>
-
+                {ingredientListItems}
             </ul>
 
             
