@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Main() {
   const [result, setResult] = React.useState("hello World");
-  console.log({ result });
+  // console.log({ result });
   // setResult("Hola Mohamed !")
 
   const ingredients = ["Chicken", "Oregano", "Tomatoes"];
@@ -20,6 +20,16 @@ export default function Main() {
     console.log({ newIngredient });
 
     setResult("Hola Mohamed !");
+  }
+
+  const [count, setCount] = React.useState(0);
+
+  function add() {
+    setCount(count + 1);
+  }
+
+  function subtract() {
+    setCount(count - 1);
   }
 
   return (
@@ -46,9 +56,21 @@ export default function Main() {
       <ul>{ingredientListItems}</ul>
 
       <div className="counter">
-        <span>0</span>
-        <button className="circle minus">-</button>
-        <button className="circle plus">+</button>
+        <span>{count}</span>
+        <button
+          className="circle minus"
+          onClick={subtract}
+          aria-label="decrease count"
+        >
+          -
+        </button>
+        <button
+          className="circle plus"
+          onClick={add}
+          aria-label="increase count"
+        >
+          +
+        </button>
       </div>
     </main>
   );
