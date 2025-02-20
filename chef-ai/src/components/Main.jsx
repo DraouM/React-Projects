@@ -22,10 +22,11 @@ export default function Main() {
     setResult("Hola Mohamed !");
   }
 
-  const [status, setStatus] = React.useState("false");
-  const changeStatus = () => {
-    setStatus((prev) => !prev);
-  };
+  const [items, setItems] = React.useState([]);
+
+  function addItems() {
+    setItems((items) => [...items, "Test"]);
+  }
 
   return (
     <main>
@@ -50,14 +51,8 @@ export default function Main() {
 
       <ul>{ingredientListItems}</ul>
 
-      <div className="counter">
-        <button
-          onClick={changeStatus}
-          aria-label={`the current status is ${status} click to change it`}
-        >
-          {status ? "Yes" : "No"}
-        </button>
-      </div>
+      <button onClick={addItems}>Add Item</button>
+      <section aria-live="polite">{items}</section>
     </main>
   );
 }
