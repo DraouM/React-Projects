@@ -22,15 +22,10 @@ export default function Main() {
     setResult("Hola Mohamed !");
   }
 
-  const [count, setCount] = React.useState(0);
-
-  function add() {
-    setCount(count + 1);
-  }
-
-  function subtract() {
-    setCount(count - 1);
-  }
+  const [status, setStatus] = React.useState("false");
+  const changeStatus = () => {
+    setStatus((prev) => !prev);
+  };
 
   return (
     <main>
@@ -56,20 +51,11 @@ export default function Main() {
       <ul>{ingredientListItems}</ul>
 
       <div className="counter">
-        <span>{count}</span>
         <button
-          className="circle minus"
-          onClick={subtract}
-          aria-label="decrease count"
+          onClick={changeStatus}
+          aria-label={`the current status is ${status} click to change it`}
         >
-          -
-        </button>
-        <button
-          className="circle plus"
-          onClick={add}
-          aria-label="increase count"
-        >
-          +
+          {status ? "Yes" : "No"}
         </button>
       </div>
     </main>
