@@ -152,3 +152,31 @@ li {
 .counter .circle.plus {
     right: 3rem;
 }
+
+
+.star-button {
+    font-size: 40px;
+    /* Size of the star */
+    color: #ffd700;
+    /* Gold star color */
+    background-color: #fff;
+    /* White background */
+    border: 2px solid #ffd700;
+    /* Gold border */
+    border-radius: 50%;
+    /* Circular shape */
+    width: 60px;
+    /* Fixed width */
+    height: 60px;
+    /* Fixed height */
+    display: flex;
+    /* Center the star */
+    align-items: center;
+    /* Vertical centering */
+    justify-content: center;
+    /* Horizontal centering */
+    cursor: pointer;
+    /* Hand on hover */
+    transition: all 0.3s ease;
+    /* Smooth hover effect */
+}

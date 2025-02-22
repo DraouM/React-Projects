@@ -21,6 +21,23 @@ export default function Main() {
     ]);
   }
 
+  const [contact, setContact] = React.useState({
+    firstName: "Mohamed",
+    lastName: "Draou",
+    filled: false,
+  });
+
+  function clickStar() {
+    setContact((filled) => {
+      console.log(filled);
+      return {
+        firstName: contact.firstName,
+        lastName: contact.lastName,
+        filled: !contact.filled,
+      };
+    });
+  }
+
   return (
     <main>
       <form
@@ -43,6 +60,19 @@ export default function Main() {
       {/* <h3>{result}</h3>  */}
 
       <ul>{ingredientListItems}</ul>
+
+      <div className="contact">
+        <h1>
+          {contact.firstName} {contact.lastName}
+        </h1>
+        <button className="star-button" onClick={clickStar}>
+          {contact.filled ? (
+            <i className="fas fa-star">★</i>
+          ) : (
+            <i className="far fa-star"></i>
+          )}
+        </button>
+      </div>
     </main>
   );
 }
